@@ -1,0 +1,57 @@
+<div class="header bg-gradient-primary1 py-6 py-lg-6">
+
+</div>
+<!-- Page content -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 col-md-7">
+      <div class="card bg-secondary shadow border-0">
+       <!--  <div class="card-header bg-transparent pb-5">
+          <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
+          <div class="btn-wrapper text-center">
+            <a href="javascript:void(0)" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon"><img src="../assets/img/icons/common/github.svg"></span>
+              <span class="btn-inner--text">Github</span>
+            </a>
+            <a href="javascript:void(0)" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon"><img src="../assets/img/icons/common/google.svg"></span>
+              <span class="btn-inner--text">Google</span>
+            </a>
+          </div>
+        </div> -->
+        <div class="card-body px-lg-4 py-lg-2">
+          <div class="text-center text-muted mb-4">
+            <img class="mb-3" src="assets/img/brand/nhis-alert.png" />
+           
+          </div>
+          <form role="form">
+            <p class="text-red text-center">The membership ID is invalid</p>
+            <div class="form-group mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-credit-card"></i></span>
+                </div>
+                <input class="form-control" placeholder="username" type="email"  [(ngModel)]="username" name="username" >
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
+                </div>
+                <input class="form-control" placeholder="password" type="password"  [(ngModel)]="password" name="password" > 
+              </div>
+            </div>
+            <div class="custom-control">
+              <a routerLink="/register" class="text-muted"><small>Forgot password?</small></a>
+            </div>
+            <div class="text-center">
+              <button type="button" class="btn btn-primary my-4" (click)="login()">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+   
+    </div>
+  </div>
+</div>

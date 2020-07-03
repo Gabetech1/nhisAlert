@@ -1,0 +1,101 @@
+
+<!-- Page content -->
+<div class="container py-7">
+  <div class="row justify-content-center">
+    <div class="">
+      <div class="card bg-secondary shadow border-0">
+       <!--  <div class="card-header bg-transparent pb-5">
+          <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
+          <div class="btn-wrapper text-center">
+            <a href="javascript:void(0)" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon"><img src="../assets/img/icons/common/github.svg"></span>
+              <span class="btn-inner--text">Github</span>
+            </a>
+            <a href="javascript:void(0)" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon"><img src="../assets/img/icons/common/google.svg"></span>
+              <span class="btn-inner--text">Google</span>
+            </a>
+          </div>
+        </div> -->
+        <div class="card-body">
+          <div class="text-center">
+            <img class="mb-5" src="assets/img/brand/nhis-alert.png" />
+          
+          </div>
+          <form role="form">
+            <p *ngIf="showError" class="text-red text-center">The membership ID is invalid</p>       
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Enter your firstname" type="text" [(ngModel)]="firstname" name="firstname">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Enter your lastname" type="text" [(ngModel)]="lastname" name="lastname">
+                </div>
+              </div>
+              <div class="form-group col-md-12">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Username" type="text" [(ngModel)]="username" name="username">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Email" type="email" [(ngModel)]="email" name="email">
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
+                  </div>
+                  <input class="form-control" 
+                         placeholder="New Phone number" 
+                         type="tel" [(ngModel)]="phonenumber" 
+                         name="phonenumber" 
+                         onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-key-25"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Password" type="password" [(ngModel)]="password" name="password">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-key-25"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Confirm password" type="password" [(ngModel)]="password2" name="password2">
+                </div>
+              </div>             
+            </div> 
+            <div class="text-center">
+              <button type="button" class="btn btn-primary my-4" (click)="signup()">Sign Up</button>
+            </div>         
+          </form>
+         
+        </div>
+      </div>
+   
+    </div>
+  </div>
+</div>
